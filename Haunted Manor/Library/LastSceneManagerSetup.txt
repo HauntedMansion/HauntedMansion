@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Mansion.unity
+- path: Assets/Scenes/Mansion.unity
   isLoaded: 1
   isActive: 1
