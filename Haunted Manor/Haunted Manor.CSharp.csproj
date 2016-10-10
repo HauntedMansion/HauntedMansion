@@ -66,7 +66,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Scripts\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\Ghoul\GhoulController.cs" />
+    <Compile Include="Assets\Scripts\HeadBob.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Objects\BulletController.cs" />
+    <Compile Include="Assets\Scripts\Objects\GunController.cs" />
+    <Compile Include="Assets\Scripts\Objects\Healthbar.cs" />
     <Compile Include="Assets\Scripts\RandomRoomGenerator.cs" />
+    <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\Utility\ActivateTrigger.cs" />
+    <Compile Include="Assets\Scripts\Utility\AlphaButtonClickMask.cs" />
+    <Compile Include="Assets\Scripts\Utility\AutoMobileShaderSwitch.cs" />
+    <Compile Include="Assets\Scripts\Utility\AutoMoveAndRotate.cs" />
+    <Compile Include="Assets\Scripts\Utility\CameraRefocus.cs" />
+    <Compile Include="Assets\Scripts\Utility\CurveControlledBob.cs" />
+    <Compile Include="Assets\Scripts\Utility\DragRigidbody.cs" />
+    <Compile Include="Assets\Scripts\Utility\DynamicShadowSettings.cs" />
+    <Compile Include="Assets\Scripts\Utility\EventSystemChecker.cs" />
+    <Compile Include="Assets\Scripts\Utility\FOVKick.cs" />
+    <Compile Include="Assets\Scripts\Utility\FPSCounter.cs" />
+    <Compile Include="Assets\Scripts\Utility\FollowTarget.cs" />
+    <Compile Include="Assets\Scripts\Utility\ForcedReset.cs" />
+    <Compile Include="Assets\Scripts\Utility\LerpControlledBob.cs" />
+    <Compile Include="Assets\Scripts\Utility\ObjectResetter.cs" />
+    <Compile Include="Assets\Scripts\Utility\ParticleSystemDestroyer.cs" />
+    <Compile Include="Assets\Scripts\Utility\PlatformSpecificContent.cs" />
+    <Compile Include="Assets\Scripts\Utility\SimpleActivatorMenu.cs" />
+    <Compile Include="Assets\Scripts\Utility\SimpleMouseRotator.cs" />
+    <Compile Include="Assets\Scripts\Utility\SmoothFollow.cs" />
+    <Compile Include="Assets\Scripts\Utility\TimedObjectActivator.cs" />
+    <Compile Include="Assets\Scripts\Utility\TimedObjectDestructor.cs" />
+    <Compile Include="Assets\Scripts\Utility\WaypointCircuit.cs" />
+    <Compile Include="Assets\Scripts\Utility\WaypointProgressTracker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Scripts\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
