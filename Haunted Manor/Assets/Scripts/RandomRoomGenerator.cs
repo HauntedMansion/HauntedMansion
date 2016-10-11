@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class RandomRoomGenerator : MonoBehaviour {
 
-  public GameObject emptyRoom;
+  public List<GameObject> rooms;
 
   GameObject[] doorways;
 
@@ -13,10 +13,12 @@ public class RandomRoomGenerator : MonoBehaviour {
     AddRoomsOnDoorways();
 	}
   void AddRoomsOnDoorways()
-  {
-    for(int i = 0; i < doorways.Length; i++)
+  { 
+    
+    for (int i = 0; i < doorways.Length; i++)
     {
-      Instantiate(emptyRoom, doorways[i].transform.localPosition, doorways[i].transform.localRotation);
+      int randomRoom = Random.Range(0, rooms.Count);
+      Instantiate(rooms[randomRoom], doorways[i].transform.localPosition, doorways[i].transform.localRotation);
     }
   }
 
