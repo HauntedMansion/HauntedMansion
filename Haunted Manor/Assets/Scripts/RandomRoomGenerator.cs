@@ -5,20 +5,19 @@ public class RandomRoomGenerator : MonoBehaviour {
 
   public List<GameObject> rooms;
 
-  GameObject[] doorways;
+  GameObject[] roomSpawns;
 
 	void Start ()
   {
-    doorways = GameObject.FindGameObjectsWithTag("Doorway");
+    roomSpawns = GameObject.FindGameObjectsWithTag("RoomSpawn");
     AddRoomsOnDoorways();
 	}
   void AddRoomsOnDoorways()
-  { 
-    
-    for (int i = 0; i < doorways.Length; i++)
+  {     
+    for (int i = 0; i < roomSpawns.Length; i++)
     {
       int randomRoom = Random.Range(0, rooms.Count);
-      Instantiate(rooms[randomRoom], doorways[i].transform.localPosition, doorways[i].transform.localRotation);
+      Instantiate(rooms[randomRoom], roomSpawns[i].transform.localPosition, roomSpawns[i].transform.localRotation);
     }
   }
 
