@@ -7,7 +7,7 @@ public class GhoulController : MonoBehaviour {
 	public int slowDist;
 	public float moveSpeed;
 	public float slowSpeed;
-	public float teleportAfterShot = 7;
+	public float teleportAfterShot = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +43,24 @@ public class GhoulController : MonoBehaviour {
 			Destroy (other.gameObject);
 
 		if (other.tag == "Bullet") {
-			transform.position -= transform.forward * teleportAfterShot;
+			randomTeleport ();
+			randomTeleport ();
+			randomTeleport ();
 		}
+	}
+
+	void randomTeleport()
+	{
+		float direction = Random.value;
+
+		if (direction <= 0.25f)
+			transform.position -= transform.forward * teleportAfterShot;
+		else if (direction > 0.25f && direction <= 0.5f)
+			transform.position = transform.forward * teleportAfterShot;
+		else if (direction > 0.5f && direction <= 0.75f)
+			transform.position = transform.right * teleportAfterShot;
+		else if (direction > 0.75f && direction <= 1f)
+			transform.position -= transform.right * teleportAfterShot;
+
 	}
 }
