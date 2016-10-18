@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class GhoulController : MonoBehaviour
 {
@@ -88,11 +90,18 @@ public class GhoulController : MonoBehaviour
   {
     return health;
   }
+  void LoadMenu()
+  {
+    SceneManager.LoadScene("Menu");
+  }
 
   void OnTriggerEnter(Collider other)
   {
     if (other.tag == "Player")
     {
+      FirstPersonController controller = other.GetComponentInChildren<FirstPersonController>();
+      controller.GetMouseLook().SetCursorLock(false);      
+
       gameText.SetActive(true);
       gameText.GetComponent<Text>().text = "You are Dead";
       Camera playerCam = other.GetComponentInChildren<Camera>();
@@ -100,6 +109,7 @@ public class GhoulController : MonoBehaviour
       gameOverCamera.GetComponent<Camera>().transform.rotation = playerCam.transform.rotation;
       gameOverCamera.SetActive(true);
       Destroy(other.gameObject);
+      Invoke("LoadMenu", 4);
       
     }
 

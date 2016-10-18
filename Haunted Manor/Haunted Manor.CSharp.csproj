@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Ghoul\GhoulController.cs" />
     <Compile Include="Assets\Scripts\HeadBob.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\ButtonPress.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Objects\BulletController.cs" />
     <Compile Include="Assets\Scripts\Objects\GunController.cs" />
