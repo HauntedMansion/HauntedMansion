@@ -97,39 +97,40 @@ public class GhoulController : MonoBehaviour
 
   void OnTriggerEnter(Collider other)
   {
-    if (other.tag == "Player")
-    {
+      if (other.tag == "Player")
+      {
+      GetComponent<Animator>().SetTrigger("isAttacking");
       FirstPersonController controller = other.GetComponentInChildren<FirstPersonController>();
-      controller.GetMouseLook().SetCursorLock(false);      
+        controller.GetMouseLook().SetCursorLock(false);
 
-      gameText.SetActive(true);
-      gameText.GetComponent<Text>().text = "You are Dead";
-      Camera playerCam = other.GetComponentInChildren<Camera>();
-      gameOverCamera.GetComponent<Camera>().transform.position = playerCam.transform.position;
-      gameOverCamera.GetComponent<Camera>().transform.rotation = playerCam.transform.rotation;
-      gameOverCamera.SetActive(true);
-      Destroy(other.gameObject);
-      Invoke("LoadMenu", 4);
-      
-    }
+        gameText.SetActive(true);
+        gameText.GetComponent<Text>().text = "You are Dead";
+        Camera playerCam = other.GetComponentInChildren<Camera>();
+        gameOverCamera.GetComponent<Camera>().transform.position = playerCam.transform.position;
+        gameOverCamera.GetComponent<Camera>().transform.rotation = playerCam.transform.rotation;
+        gameOverCamera.SetActive(true);
+        Destroy(other.gameObject);
+        Invoke("LoadMenu", 4);
 
-    if (other.tag == "Bullet")
-    {
-
-      if (Random.value <= 0.25f)
-      {
-        pursuing = false;
-        spawnRoom();
       }
-      else
+      if (other.tag == "Bullet")
       {
-        randomTeleport();
-        randomTeleport();
-        randomTeleport();
-      }
 
-      sprint = false;
-    }
+        if (Random.value <= 0.25f)
+        {
+          pursuing = false;
+          spawnRoom();
+        }
+        else
+        {
+          randomTeleport();
+          randomTeleport();
+          randomTeleport();
+        }
+
+        sprint = false;
+      }
+    
   }
 
   void randomTeleport()

@@ -74,7 +74,7 @@ public class CombineChildren : MonoBehaviour
         filter.mesh = MeshCombineUtility.Combine(instances, generateTriangleStrips);
         GetComponent<Renderer>().material = (Material)de.Key;
         GetComponent<Renderer>().enabled = true;
-        GetComponent<Renderer>().castShadows = castShadows;
+        //GetComponent<Renderer>().castShadows = castShadows;
         GetComponent<Renderer>().receiveShadows = receiveShadows;
       }
       // We have multiple materials to take care of, build one mesh / gameobject for each material
